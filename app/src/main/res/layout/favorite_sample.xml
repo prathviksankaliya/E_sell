@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_3mdp">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_3mdp"
+        android:elevation="@dimen/_48mdp"
+        app:cardCornerRadius="@dimen/_16mdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/litewhite">
+
+            <ImageView
+                android:id="@+id/igHomeCatShowImage"
+                android:layout_width="@dimen/_140mdp"
+                android:layout_height="@dimen/_130mdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/testing"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txHomeCatPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/price"
+                android:textColor="@color/lightblack"
+                android:textSize="@dimen/_13font_mdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/igHomeCatShowImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txHomeCatDesc"
+                android:layout_width="146dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/roboto"
+                android:text="I Phone 11 Pro navpo aayo ae ho ala apple no"
+                android:textSize="@dimen/_11font_mdp"
+                app:layout_constraintStart_toStartOf="@+id/txHomeCatPrice"
+                app:layout_constraintTop_toBottomOf="@+id/txHomeCatPrice" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="@dimen/_15mdp"
+                android:layout_height="@dimen/_15mdp"
+                android:layout_marginTop="@dimen/_3mdp"
+                android:layout_marginBottom="@dimen/_3mdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_baseline_location_on_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txHomeCatDesc"
+                app:layout_constraintTop_toBottomOf="@+id/txHomeCatDesc"
+                app:layout_constraintVertical_bias="0.789" />
+
+            <TextView
+                android:id="@+id/txHomeCatItemLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4mdp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Limbdi"
+                android:textSize="@dimen/_9font_mdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

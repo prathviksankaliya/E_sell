@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.FavoriteFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFavoriteItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5mdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <!--    <LinearLayout-->
+    <!--       android:id="@+id/myadsFavLinear"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:gravity="center"-->
+    <!--        android:layout_margin="@dimen/_32mdp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+
+    <!--        <TextView-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_margin="@dimen/_10mdp"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="You Haven't Liked Anything Yet"-->
+    <!--            android:textSize="@dimen/_15font_mdp"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintHorizontal_bias="0.5"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/TvNoMessagesYet_selling" />-->
+
+    <!--        <Button-->
+    <!--           android:id="@+id/btnMyadsFav"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:background="@drawable/main_search_bg"-->
+    <!--            android:text="Discover"-->
+    <!--            android:layout_marginTop="@dimen/_8mdp"-->
+    <!--            android:gravity="center"-->
+    <!--            android:textColor="@color/lightblack"-->
+    <!--            android:textSize="@dimen/_16font_mdp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintEnd_toEndOf="@+id/TvKeepMessages_selling"-->
+    <!--            app:layout_constraintStart_toStartOf="@+id/TvKeepMessages_selling"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/TvKeepMessages_selling" />-->
+    <!--    </LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

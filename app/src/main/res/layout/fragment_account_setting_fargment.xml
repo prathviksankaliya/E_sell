@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.AccountSettingFragment">
+
+    <ImageView
+        android:id="@+id/igHelpBackToAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12mdp"
+        android:layout_marginTop="@dimen/_12mdp"
+        android:padding="@dimen/_4mdp"
+        android:src="@drawable/ic_baseline_keyboard_backspace_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12mdp"
+        android:text="@string/setting"
+        android:textColor="@color/lightblack"
+        android:textSize="@dimen/_18font_mdp"
+        app:layout_constraintBottom_toBottomOf="@+id/igHelpBackToAccount"
+        app:layout_constraintStart_toEndOf="@+id/igHelpBackToAccount"
+        app:layout_constraintTop_toTopOf="@+id/igHelpBackToAccount" />
+
+
+    <TextView
+        android:id="@+id/txLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12mdp"
+        android:layout_marginTop="@dimen/_12mdp"
+        android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+        android:fontFamily="serif"
+        android:text="@string/logout"
+        android:textColor="@color/lightblack"
+        android:textSize="@dimen/_15font_mdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1mdp"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:background="@color/liteBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txLogout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.UserProfileFragment">
+
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16mdp"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Manage Profile"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18font_mdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/igVerify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16mdp"
+        android:src="@drawable/verify1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/textView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView11" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/igProfileDp"
+        android:layout_width="@dimen/_120mdp"
+        android:layout_height="@dimen/_120mdp"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:src="@drawable/edit_profile_icon"
+        app:layout_constraintEnd_toEndOf="@+id/igVerify"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/btnEditImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:padding="@dimen/_1mdp"
+        android:text="Edit"
+        android:textColor="@color/lightblack"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/igProfileDp"
+        app:layout_constraintEnd_toEndOf="@+id/igProfileDp"
+        app:layout_constraintStart_toStartOf="@+id/igProfileDp" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16mdp"
+        android:layout_marginTop="@dimen/_12mdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/igProfileDp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edUserName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter Your Name"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/textInputLayout"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txProfileNameError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="* Must be Enter Your Good Name"
+        android:textColor="@color/blue_grey"
+        android:textSize="@dimen/_9font_mdp"
+
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6mdp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/txProfileNameError">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edUserAboutUs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="About Us"
+            android:inputType="text"
+            app:layout_constraintBottom_toBottomOf="@+id/textInputLayout1"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout1"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+
+        android:id="@+id/txProfileAboutError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="* Your Profession Title like (e.g. Job, Business, Store)"
+        android:textColor="@color/blue_grey"
+        android:textSize="@dimen/_9font_mdp"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout1"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout1" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6mdp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout1"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout1"
+        app:layout_constraintTop_toBottomOf="@+id/txProfileAboutError">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edUserPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter Your Phone Number"
+            android:inputType="number"
+            android:textIsSelectable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/textInputLayout2"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout2" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+
+        android:id="@+id/txProfilePhoneError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="* Phone Number Must be in Indian Code like +91"
+        android:textColor="@color/blue_grey"
+        android:textSize="@dimen/_9font_mdp"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6mdp"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/txProfilePhoneError">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edUserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter Your Email Address"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toBottomOf="@+id/textInputLayout3"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout3"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout3" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txProfileEmailError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="* Your Email Must be include @ and .com"
+        android:textColor="@color/blue_grey"
+        android:textSize="@dimen/_9font_mdp"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+
+    <TextView
+        android:id="@+id/confirmlocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Confirm Your Location"
+        android:textColor="@color/lightblack"
+        android:textSize="@dimen/_12font_mdp"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/txProfileEmailError" />
+
+    <TextView
+        android:id="@+id/txUserLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Verify Location"
+        android:textColor="@color/lightblack"
+        android:textSize="@dimen/_11font_mdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/confirmlocation"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout3"
+        app:layout_constraintTop_toTopOf="@+id/confirmlocation" />
+
+    <TextView
+        android:id="@+id/txLocationn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/city_name"
+        android:textSize="@dimen/_13font_mdp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/confirmlocation"
+        app:layout_constraintTop_toBottomOf="@+id/confirmlocation" />
+
+    <TextView
+        android:id="@+id/txProfileLocationError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="* Confirm Your Present Location"
+        android:textColor="@color/blue_grey"
+        android:textSize="@dimen/_9font_mdp"
+        app:layout_constraintStart_toStartOf="@+id/confirmlocation"
+        app:layout_constraintTop_toBottomOf="@+id/txLocationn" />
+
+    <Button
+        android:id="@+id/btnNextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16mdp"
+        android:backgroundTint="@color/lightblue"
+        android:padding="@dimen/_8mdp"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cbPolicy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/confirmlocation"
+        app:layout_constraintTop_toBottomOf="@+id/txProfileLocationError" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="I've agreed to the E-sell Policy and E-Sell Service Policy"
+        android:textSize="@dimen/_9font_mdp"
+        app:layout_constraintBottom_toBottomOf="@+id/cbPolicy"
+        app:layout_constraintEnd_toEndOf="@+id/txUserLocation"
+        app:layout_constraintStart_toEndOf="@+id/cbPolicy"
+        app:layout_constraintTop_toTopOf="@+id/cbPolicy" />
+
+    <TextView
+        android:id="@+id/txPolicyError"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3mdp"
+        android:textSize="@dimen/_9font_mdp"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintStart_toEndOf="@+id/cbPolicy"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+</androidx.constraintlayout.widget.ConstraintLayout>

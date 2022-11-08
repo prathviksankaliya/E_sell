@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bNavHome"
+        android:icon="@drawable/ic_home"
+        android:menuCategory="secondary"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/bNavChat"
+        android:icon="@drawable/ic_chat_icon"
+        android:menuCategory="secondary"
+        android:title="Discuss" />
+
+    <item
+        android:id="@+id/bNavSell"
+        android:icon="@drawable/ic_sell"
+        android:menuCategory="secondary"
+        android:title="Sell" />
+
+    <item
+        android:id="@+id/bNavMyAds"
+        android:icon="@drawable/ic_heart_unselected"
+        android:menuCategory="secondary"
+        android:title="My Ads" />
+
+    <item
+        android:id="@+id/bNavAccount"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:menuCategory="secondary"
+        android:title="Account" />
+
+</menu>

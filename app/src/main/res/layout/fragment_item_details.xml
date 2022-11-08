@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.ItemDetailsFragment">
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/isProductImagesSlider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250mdp"
+        android:layout_marginTop="@dimen/_6mdp"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        app:iss_auto_cycle="true"
+        app:iss_delay="0"
+        app:iss_error_image="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:iss_period="2000"
+         />
+
+    <ImageView
+        android:id="@+id/igItemDetailsBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8mdp"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:padding="@dimen/_5mdp"
+        android:src="@drawable/ic_baseline_keyboard_backspace_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txItemDetailsPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12mdp"
+                android:layout_marginTop="@dimen/_12mdp"
+                android:fontFamily="serif"
+                android:text="Rp 11.000.000"
+                android:textColor="@color/lightblack"
+                android:textSize="@dimen/_18font_mdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txItemDetailsName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3mdp"
+                android:maxLines="2"
+                android:text="iphone 11 pro max 256gb bisa TT"
+                android:textColor="@color/lightblack"
+                android:textSize="@dimen/_14font_mdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/igItemDetailsShare"
+                app:layout_constraintStart_toStartOf="@+id/txItemDetailsPrice"
+                app:layout_constraintTop_toBottomOf="@+id/igItemDetailsShare" />
+
+            <!--            <ImageView-->
+            <!--                android:id="@+id/igItemDetailsLike"-->
+            <!--                android:layout_width="@dimen/_20mdp"-->
+            <!--                android:layout_height="@dimen/_20mdp"-->
+            <!--                android:layout_marginEnd="@dimen/_12mdp"-->
+            <!--                android:src="@drawable/like"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="@+id/txItemDetailsPrice" />-->
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_13mdp"
+                android:src="@drawable/ic_baseline_location_on_24"
+                app:layout_constraintStart_toStartOf="@+id/txItemDetailsName"
+                app:layout_constraintTop_toBottomOf="@+id/txItemDetailsName" />
+
+            <TextView
+                android:id="@+id/txItemDetailsLocation"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_8mdp"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:text="Munjka , Rajkot"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+                app:layout_constraintEnd_toEndOf="@+id/txItemDetailsName"
+                app:layout_constraintStart_toEndOf="@+id/imageView10"
+                app:layout_constraintTop_toTopOf="@+id/imageView10" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:text="Description"
+                android:textColor="@color/lightblack"
+                android:textSize="@dimen/_14font_mdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/imageView10"
+                app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+            <TextView
+                android:id="@+id/txItemDesc"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_5mdp"
+                android:text="In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. "
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="@+id/txItemDetailsName"
+                app:layout_constraintStart_toStartOf="@+id/textView12"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8mdp"
+                android:orientation="horizontal"
+                android:padding="@dimen/_8mdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <Button
+                    android:id="@+id/btnChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5mdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_bg"
+                    android:padding="@dimen/_10mdp"
+                    android:text="Chat with Seller"
+                    android:textSize="@dimen/_12font_mdp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/igItemDetailsShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10mdp"
+                android:padding="@dimen/_5mdp"
+                android:src="@drawable/ic_baseline_share_24"
+                app:layout_constraintBottom_toBottomOf="@+id/txItemDetailsPrice"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txItemDetailsPrice" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.AccountFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/igProfileImage"
+                android:layout_width="@dimen/_80mdp"
+                android:layout_height="@dimen/_80mdp"
+                android:layout_marginStart="@dimen/_12mdp"
+                android:layout_marginTop="@dimen/_24mdp"
+                android:src="@drawable/edit_profile_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txUserName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8mdp"
+                android:layout_marginEnd="@dimen/_8mdp"
+                android:fontFamily="serif"
+                android:text="@string/prathvik_sankaliya"
+                android:textColor="@color/lightblack"
+                android:textSize="@dimen/_16font_mdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/igProfileImage"
+                app:layout_constraintTop_toTopOf="@+id/igProfileImage" />
+
+            <TextView
+                android:id="@+id/txUserAbout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:fontFamily="serif"
+                android:text="@string/i_am_android_developer_at_ics"
+                android:textColor="@color/lightblack"
+                android:textSize="@dimen/_9font_mdp"
+                app:layout_constraintEnd_toEndOf="@+id/txUserName"
+                app:layout_constraintStart_toStartOf="@+id/txUserName"
+                app:layout_constraintTop_toBottomOf="@+id/txUserName" />
+
+            <Button
+                android:id="@+id/btnEditProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12mdp"
+                android:background="@drawable/rectangle_bg"
+                android:text="@string/edit_profile"
+                android:textSize="@dimen/_8font_mdp"
+                app:layout_constraintEnd_toEndOf="@+id/txUserAbout"
+                app:layout_constraintTop_toBottomOf="@+id/txUserAbout" />
+
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_32mdp"
+                android:src="@drawable/ic_shopping_bag"
+                app:layout_constraintStart_toStartOf="@+id/igProfileImage"
+                app:layout_constraintTop_toBottomOf="@+id/btnEditProfile" />
+
+            <LinearLayout
+                android:id="@+id/llAccountMyOrders"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/btnEditProfile"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="@+id/imageView5">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16mdp"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:fontFamily="serif"
+                    android:text="@string/my_orders"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/_15font_mdp"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16mdp"
+                    android:text="@string/active_orders_expire_orders"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/_9font_mdp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1mdp"
+                android:layout_marginTop="@dimen/_6mdp"
+                android:background="@color/liteBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llAccountMyOrders" />
+
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16mdp"
+                android:src="@drawable/ic_information"
+                app:layout_constraintStart_toStartOf="@+id/imageView5"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <LinearLayout
+
+                android:id="@+id/llAccountHelp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/llAccountMyOrders"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintTop_toTopOf="@+id/imageView7">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16mdp"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:fontFamily="serif"
+                    android:text="@string/help"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/_15font_mdp"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16mdp"
+                    android:text="@string/rate_us_invite_firends_version"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/_9font_mdp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1mdp"
+                android:layout_marginTop="@dimen/_6mdp"
+                android:background="@color/liteBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llAccountHelp" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16mdp"
+                android:src="@drawable/settings"
+                app:layout_constraintStart_toStartOf="@+id/imageView7"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <LinearLayout
+
+                android:id="@+id/llAccountLogout"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/llAccountHelp"
+                app:layout_constraintStart_toEndOf="@+id/imageView8"
+                app:layout_constraintTop_toTopOf="@+id/imageView8">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16mdp"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:fontFamily="serif"
+                    android:text="@string/settings"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/_15font_mdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16mdp"
+                    android:text="@string/logout_theme_mode"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/_9font_mdp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1mdp"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:background="@color/liteBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llAccountLogout" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16mdp"
+                android:src="@drawable/language"
+                app:layout_constraintStart_toStartOf="@+id/imageView8"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+            <LinearLayout
+                android:id="@+id/llAccountSelectLang"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/llAccountLogout"
+                app:layout_constraintStart_toEndOf="@+id/imageView6"
+                app:layout_constraintTop_toTopOf="@+id/imageView6">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16mdp"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:fontFamily="serif"
+                    android:text="@string/select_language"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/_15font_mdp"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16mdp"
+                    android:text="@string/default_english"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/_9font_mdp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1mdp"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:background="@color/liteBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llAccountSelectLang" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

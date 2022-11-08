@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.AccountHelpFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/igHelpBackToAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12mdp"
+                android:layout_marginTop="@dimen/_12mdp"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_4mdp"
+                android:src="@drawable/ic_baseline_keyboard_backspace_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12mdp"
+                android:text="@string/help"
+                android:textColor="@color/lightblack"
+                android:textSize="@dimen/_18font_mdp"
+                app:layout_constraintBottom_toBottomOf="@+id/igHelpBackToAccount"
+                app:layout_constraintStart_toEndOf="@+id/igHelpBackToAccount"
+                app:layout_constraintTop_toTopOf="@+id/igHelpBackToAccount" />
+
+
+            <LinearLayout
+                android:id="@+id/llAccountRateUs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24mdp"
+                android:layout_marginEnd="@dimen/_8mdp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/igHelpBackToAccount"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:fontFamily="serif"
+                    android:text="@string/rate_us"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/_15font_mdp"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/if_you_love_our_app_please_take_a_moment_to_rate_it"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/_9font_mdp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1mdp"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:background="@color/liteBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llAccountRateUs" />
+
+
+            <LinearLayout
+
+                android:id="@+id/llAccountInvite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12mdp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/llAccountRateUs"
+                app:layout_constraintStart_toStartOf="@+id/llAccountRateUs"
+                app:layout_constraintTop_toBottomOf="@+id/view5">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:fontFamily="serif"
+                    android:text="@string/invite_friends_to_e_sell"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/_15font_mdp"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/invite_your_friends_to_buy_and_sell"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/_9font_mdp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1mdp"
+                android:layout_marginTop="@dimen/_5mdp"
+                android:background="@color/liteBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llEsellPolicy" />
+
+            <LinearLayout
+                android:id="@+id/llEsellPolicy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:layout_marginBottom="@dimen/_5mdp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/llAccountInvite"
+                app:layout_constraintStart_toStartOf="@+id/llAccountInvite"
+                app:layout_constraintTop_toBottomOf="@+id/view6">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:fontFamily="serif"
+                    android:text="@string/selling_on_e_sell"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/_15font_mdp"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/follow_our_e_sell_policy"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/_9font_mdp" />
+            </LinearLayout>
+
+            <View
+
+                android:id="@+id/view8"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1mdp"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:background="@color/liteBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llEsellServicesPolicy" />
+
+            <LinearLayout
+                android:id="@+id/llEsellServicesPolicy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/llEsellPolicy"
+                app:layout_constraintStart_toStartOf="@+id/llEsellPolicy"
+                app:layout_constraintTop_toBottomOf="@+id/view7">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:fontFamily="serif"
+                    android:text="@string/services_and_content_policy"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/_15font_mdp"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/follow_our_services_e_sell_policy"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/_9font_mdp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1mdp"
+                android:layout_marginTop="@dimen/_8mdp"
+                android:background="@color/liteBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llAccountInvite" />
+
+            <LinearLayout
+
+                android:id="@+id/linearLayout3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/llAccountInvite"
+                app:layout_constraintStart_toStartOf="@+id/llAccountInvite"
+                app:layout_constraintTop_toBottomOf="@+id/view8">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:text="@string/version"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/_15font_mdp"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/v_1_0"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/_9font_mdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1mdp"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:background="@color/liteBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

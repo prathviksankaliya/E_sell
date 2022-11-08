@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.HomeFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10mdp"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_baseline_location_on_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4mdp"
+                android:fontFamily="@font/roboto_medium"
+                android:hint="@string/tap_to_enable_location"
+                android:textColor="@color/lightblack"
+                android:textSize="@dimen/_13font_mdp"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+            <EditText
+                android:id="@+id/edHomeSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6mdp"
+                android:layout_marginEnd="@dimen/_13mdp"
+                android:autofillHints="true"
+                android:background="@drawable/main_search_bg"
+                android:drawableStart="@drawable/ic_baseline_search_24"
+                android:drawablePadding="@dimen/_6mdp"
+                android:elevation="@dimen/_13mdp"
+                android:fontFamily="@font/roboto"
+                android:hint="@string/search_anything"
+                android:inputType="text"
+                android:padding="@dimen/_11mdp"
+                android:textSize="@dimen/_14font_mdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardviewHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12mdp"
+                android:background="#05000000"
+                android:elevation="@dimen/_30mdp"
+                app:cardCornerRadius="@dimen/_13mdp"
+                app:layout_constraintStart_toStartOf="@+id/edHomeSearch"
+                app:layout_constraintTop_toBottomOf="@+id/edHomeSearch">
+
+                <ImageView
+                    android:id="@+id/igHomeCat"
+                    android:layout_width="@dimen/_48mdp"
+                    android:layout_height="@dimen/_48mdp"
+                    android:background="#05000000"
+                    android:backgroundTint="@color/lightblue"
+                    android:contentDescription="@string/app_name"
+                    android:elevation="@dimen/_40mdp"
+                    android:padding="@dimen/_8mdp"
+                    android:src="@drawable/category" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/txHomecat"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_14mdp"
+                android:layout_marginTop="@dimen/_6mdp"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="@string/all_category"
+                android:textSize="@dimen/_8font_mdp"
+                app:layout_constraintEnd_toEndOf="@+id/cardviewHome"
+                app:layout_constraintStart_toStartOf="@+id/cardviewHome"
+                app:layout_constraintTop_toBottomOf="@+id/cardviewHome" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHomeCategory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4mdp"
+                android:layout_marginTop="@dimen/_8mdp"
+                app:layout_constraintEnd_toEndOf="@+id/edHomeSearch"
+                app:layout_constraintStart_toEndOf="@+id/cardviewHome"
+                app:layout_constraintTop_toBottomOf="@+id/edHomeSearch" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_13mdp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/fresh_recomendation"
+                android:textColor="@color/lightblack"
+                android:textSize="@dimen/_15font_mdp"
+                app:layout_constraintStart_toStartOf="@+id/cardviewHome"
+                app:layout_constraintTop_toBottomOf="@+id/rvHomeCategory" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHomeFreshItems"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4mdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <LinearLayout
+                android:id="@+id/llNoDataFound"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:text="Not Found \n Any Your Item For Sell"
+                    android:textColor="@color/lightblack"
+                    android:textSize="@dimen/_17font_mdp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

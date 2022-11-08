@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_3mdp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_3mdp"
+        android:elevation="@dimen/_38mdp"
+        app:cardCornerRadius="@dimen/_16mdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/litewhite">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4mdp"
+                android:layout_marginStart="8dp"
+                android:text="Date : "
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10font_mdp"
+                app:layout_constraintBottom_toTopOf="@+id/igItemImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25 Jan 2022"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10font_mdp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="@+id/textView2"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <TextView
+                android:id="@+id/txEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:textColor="#4CAF50"
+                android:textSize="@dimen/_13font_mdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/txItemLocation"
+                app:layout_constraintEnd_toEndOf="@+id/txItemName"
+                app:layout_constraintTop_toTopOf="@+id/txItemLocation" />
+
+            <ImageView
+                android:id="@+id/igItemImage"
+                android:layout_width="@dimen/_120mdp"
+                android:layout_height="@dimen/_130mdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/testing"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/txItemPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12mdp"
+                android:fontFamily="@font/roboto_medium"
+                android:maxLines="1"
+                android:text="@string/price"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12font_mdp"
+                app:layout_constraintEnd_toEndOf="@+id/txItemName"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/txItemName"
+                app:layout_constraintTop_toBottomOf="@+id/txItemName" />
+
+            <TextView
+                android:id="@+id/txItemName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12mdp"
+                android:layout_marginEnd="@dimen/_8mdp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="IPhone 11 Pro "
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15font_mdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/igItemImage"
+                app:layout_constraintTop_toBottomOf="@+id/txDate" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="@dimen/_15mdp"
+                android:layout_height="@dimen/_15mdp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_baseline_location_on_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txDesc" />
+
+            <TextView
+                android:id="@+id/txItemLocation"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_1mdp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="Limbdi"
+                android:textSize="@dimen/_9font_mdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                app:layout_constraintEnd_toStartOf="@+id/txEdit"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+            <TextView
+                android:id="@+id/txDesc"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_6mdp"
+                android:layout_marginBottom="@dimen/_4mdp"
+                android:text="Description "
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10font_mdp"
+                app:layout_constraintBottom_toTopOf="@+id/txItemLocation"
+                app:layout_constraintEnd_toEndOf="@+id/txItemName"
+                app:layout_constraintStart_toStartOf="@+id/txItemPrice"
+                app:layout_constraintTop_toBottomOf="@+id/txItemPrice" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
